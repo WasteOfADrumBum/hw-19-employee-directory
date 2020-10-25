@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import './css/App.css';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import NavBar from './components/NavBar';
+import MainPage from "./containers/MainPage";
+import Footer from './components/Footer';
+import Jumbotron from './components/Jumbotron';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <NavBar />
+      <Jumbotron />
+      <Route exact path="/" component={MainPage} />
+      <Footer />
+    </Router>
   );
 }
 
