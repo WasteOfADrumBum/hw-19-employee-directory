@@ -10,7 +10,7 @@ const NavBar = () => {
   return (
     <nav className="navbar navbar-light bg-light justify-content-between">
         <a className="navbar-brand" href="/">Employee Directory</a>
-        <a className="nav-link active" href="https://github.com/WasteOfADrumBum">
+        <a className="nav-link active" href="https://github.com/WasteOfADrumBum/hw-19-employee-directory">
             <FontAwesomeIcon icon={faGithub} size="2x" style={{ color: 'black' }} />
         </a>
     </nav>
