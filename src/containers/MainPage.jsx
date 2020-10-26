@@ -23,6 +23,8 @@ class MainPage extends Component {
   getEmployees = () => {
     axios
     // © http://dummy.restapiexample.com/
+    // ! List and Search Bar currently not populating locally 
+    // ! Was responsive before GitHub Pages updates
       .get("http://dummy.restapiexample.com/api/v1/employees")
       .then((response) => {
         this.setState({
@@ -44,9 +46,7 @@ class MainPage extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    
-    // TODO: Filter employees array and return matching employees
-
+  
     const employees = [...this.state.employees];
 
     const filteredEmployees = employees.filter((employee) => {
@@ -103,4 +103,5 @@ class MainPage extends Component {
     );
   }
 }
+
 export default MainPage;

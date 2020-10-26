@@ -1,4 +1,8 @@
 import React from "react";
+// ? Is this where font awesome should be imported
+// ? Can you create a import .jsx to call various lines of code
+// ? How broken down should a project get
+// FONT AWESOME ICONS v5
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fab } from '@fortawesome/free-brands-svg-icons'

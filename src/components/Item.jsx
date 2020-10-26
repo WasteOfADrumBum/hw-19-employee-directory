@@ -8,6 +8,7 @@ const Item = (props) => {
     return EmailAddress;
   }
 
+  // ToDo: Fix fragment3 phone # length issue
   function makePhoneNumber() {
     var fragment1 = Math.floor(Math.random() * 800 + 200);
     var fragment2 = Math.floor(Math.random() * 1000);

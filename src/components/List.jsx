@@ -2,6 +2,10 @@ import React from "react";
 import Item from "./Item";
 import "../css/list.css";
 
+// ! List worked locally until adding GitHub Pages updates 
+// ! Now list will not populate locally
+// ! GiHub is still currently not working
+
 const List = (props) => {
     return (
     <div className="container">

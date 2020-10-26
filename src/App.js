@@ -1,10 +1,13 @@
-import './css/App.css';
 import { BrowserRouter as Router, Route } from "react-router-dom";
+// CSS3
+import './css/App.css';
+// COMPONENTS
 import NavBar from './components/NavBar';
+import Jumbotron from './components/Jumbotron';
 import MainPage from "./containers/MainPage";
 import Footer from './components/Footer';
-import Jumbotron from './components/Jumbotron';
 
+// APP
 function App() {
   return (
     <Router>
@@ -16,4 +19,5 @@ function App() {
   );
 }
 
+// EXPORT
 export default App;
