@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 // APP
 function App() {
   return (
-    <Router>
+    <Router basename="hw-19-employee-directory">
       <NavBar />
       <Jumbotron />
       <Route exact path="/" component={MainPage} />
