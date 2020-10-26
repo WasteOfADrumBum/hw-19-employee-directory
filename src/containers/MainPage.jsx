@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import List from "../components/List";
 import axios from "axios";
+import Btn from "../components/Btn";
 
 class MainPage extends Component {
   state = {
@@ -22,10 +23,8 @@ class MainPage extends Component {
 
   getEmployees = () => {
     axios
-    // © http://dummy.restapiexample.com/
-    // ! List and Search Bar currently not populating locally 
-    // ! Was responsive before GitHub Pages updates
-      .get("http://dummy.restapiexample.com/api/v1/employees")
+      // © http://dummy.restapiexample.com/
+      .get("https://dummy.restapiexample.com/api/v1/employees")
       .then((response) => {
         this.setState({
           employees: response.data.data,
@@ -46,7 +45,7 @@ class MainPage extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-  
+
     const employees = [...this.state.employees];
 
     const filteredEmployees = employees.filter((employee) => {
@@ -79,22 +78,19 @@ class MainPage extends Component {
                       />
                     </div>
                   </div>
-                  <div className="col-sm-2">
-                    <button type="submit" className="btn btn-primary">
-                      Submit{" "}
-                    </button>
+                  <div className="col-sm-1">
+                    <Btn type="submit">Submit</Btn>
+                  </div>
+                  <div className="col-sm-1">
+                    {this.state.employees.length !==
+                      this.state.employeesToDisplay.length && (
+                      <Btn color="secondary" onClick={this.clearFilter}>
+                        Clear
+                      </Btn>
+                    )}
                   </div>
                 </div>
               </form>
-              {this.state.employees.length !==
-                this.state.employeesToDisplay.length && (
-                <button
-                  className="btn btn-secondary"
-                  onClick={this.clearFilter}
-                >
-                  Clear Filter{" "}
-                </button>
-              )}
             </div>
           </div>
         </div>

@@ -1,4 +1,3 @@
-  
 import React from "react";
 
 const Item = (props) => {
@@ -8,13 +7,25 @@ const Item = (props) => {
     return EmailAddress;
   }
 
-  // ToDo: Fix fragment3 phone # length issue
   function makePhoneNumber() {
     var fragment1 = Math.floor(Math.random() * 800 + 200);
     var fragment2 = Math.floor(Math.random() * 1000);
     var fragment3 = Math.floor(Math.random() * 10000);
-    var PhoneNumber = `(${fragment1}) ${fragment2}-${fragment3}`;
+    var PhoneNumber = `(${formatNumber(fragment1)}) ${formatNumber(fragment2)}-${formatNumber(fragment3, 4)}`;
     return PhoneNumber;
+  }
+
+  // © Ben
+  function formatNumber(num, len = 3) {
+    num = num.toString();
+    if (num.length < len) { // 1: length 1
+      var count = len - num.length; // count = 2
+      while (count) {
+        num = "0" + num; // 01, // 001
+        count--; // count = 1, count = 0
+      }
+    }
+    return num; // 001
   }
 
   return (

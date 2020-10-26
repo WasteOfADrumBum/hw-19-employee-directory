@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 // APP
 function App() {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router basename={process.env.PUBLIC_URL + "/"}>
       <NavBar />
       <Jumbotron />
       <Route exact path="/" component={MainPage} />
