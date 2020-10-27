@@ -1,12 +1,14 @@
 import React from "react";
 
 const Item = (props) => {
+  // Generate e-mail addresses
   function makeEmailAddress(props) {
     var employeeName = props.employee_name.toLowerCase().split(" ");
     var EmailAddress = `${employeeName[0]}.${employeeName[1]}@company.com`;
     return EmailAddress;
   }
 
+  // Generate phone numbers
   function makePhoneNumber() {
     var fragment1 = Math.floor(Math.random() * 800 + 200);
     var fragment2 = Math.floor(Math.random() * 1000);
@@ -16,6 +18,7 @@ const Item = (props) => {
   }
 
   // © Ben
+  // Phone number random 0 first fix
   function formatNumber(num, len = 3) {
     num = num.toString();
     if (num.length < len) { // 1: length 1

@@ -66,25 +66,27 @@ class MainPage extends Component {
             <div className="col">
               <form onSubmit={this.handleSubmit}>
                 <div className="row">
-                  <div className="col-sm-10">
+                  <div className="col-sm-2" />
+                  <div className="col-sm-8">
                     <div className="form-group">
                       <input
                         type="text"
                         className="form-control"
                         placeholder="Search employees by first or last name"
                         name="searchTerm"
+                        autoComplete="off"
                         value={this.state.searchTerm}
                         onChange={this.handleChange}
                       />
                     </div>
                   </div>
-                  <div className="col-sm-1">
+                  <div className="col-sm-1 text-center">
                     <Btn type="submit">Submit</Btn>
                   </div>
-                  <div className="col-sm-1">
+                  <div className="col-sm-1 text-center">
                     {this.state.employees.length !==
                       this.state.employeesToDisplay.length && (
-                      <Btn color="secondary" onClick={this.clearFilter}>
+                      <Btn color="danger" onClick={this.clearFilter}>
                         Clear
                       </Btn>
                     )}

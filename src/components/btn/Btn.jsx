@@ -1,4 +1,5 @@
 import React from "react";
+import "./btn.css";
 
 // © Ben
 function Btn(props) {
@@ -9,7 +10,7 @@ function Btn(props) {
   
     return (
       <button
-        className={classList.join(" ")}
+        className={classList.join(" ") + " btn3d" + " btn-xs"}
         onClick={props.onClick}
         type={props.type}
       >
