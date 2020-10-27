@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import List from "../components/List";
+import List from "../components/list/List";
 import axios from "axios";
-import Btn from "../components/Btn";
+import Btn from "../components/btn/Btn";
 
 class MainPage extends Component {
   state = {

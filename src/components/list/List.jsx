@@ -1,6 +1,6 @@
 import React from "react";
-import Item from "./Item";
-import "../css/list.css";
+import Item from "../item/Item";
+import "./list.css";
 
 const List = (props) => {
     return (

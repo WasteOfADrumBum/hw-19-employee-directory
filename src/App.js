@@ -2,10 +2,10 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 // CSS3
 import "./css/App.css";
 // COMPONENTS
-import NavBar from "./components/NavBar";
-import Jumbotron from "./components/Jumbotron";
+import NavBar from "./components/navbar/NavBar";
+import Jumbotron from "./components/jumbotron/Jumbotron";
 import MainPage from "./containers/MainPage";
-import Footer from "./components/Footer";
+import Footer from "./components/footer/Footer";
 
 // APP
 function App() {
